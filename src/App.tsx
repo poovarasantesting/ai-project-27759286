@@ -1,9 +1,14 @@
-import LoginForm from './components/LoginForm';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Toaster } from "@/components/ui/toaster";
+import LoginPage from "./pages/Login";
 
-function App() {
+export default function App() {
   return (
-    <LoginForm />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+      </Routes>
+      <Toaster />
+    </BrowserRouter>
   );
 }
-
-export default App;
